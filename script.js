@@ -17,7 +17,7 @@ const projectsData = {
     "Push-It!": {
         description: `
         <div class="popup-title">Push-It!</div>
-        <p class="popup-blurb">The Push-It! is a extendable, rotating, wheelchair attachment that allows manual wheelchair users to push open doors with ease. The main components of design are the user-operated "L-arm" which consists of a long moment arm, as well as the extendable contact arm which features a high friction tip in order to maintain contact with the door during use.
+        <p class="popup-blurb">The Push-It! is an extendable, rotating wheelchair attachment that enables wheelchair users to open doors with ease. The main components of design are the user-operated "L-arm" which consists of a long moment arm, as well as the extendable contact arm which features a high friction tip in order to maintain contact with the door during use.
         </p>
         <br><br>
         <div class="side-image-container">
@@ -25,8 +25,8 @@ const projectsData = {
             <div class="side-blurb">
                 <h4 style="font-size:25px">Key User</h4><br>
                 <ul style="font-size:15px">
-                    <li>In North America, there are more 2.7 million wheelchair users</li><br>
-                    <li>This number is only expected to grow exponentially due to our aging population and increasing longevity</li><br>
+                    <li>There are over 2.7 million wheelchair users in North America</li><br>
+                    <li>This number is growing exponentially due to our aging population and increasing longevity</li><br>
                     <li>Currently, manual wheelchairs make up 61.1% of the wheelchairs in North America</li>
                 </ul>
             </div>
@@ -58,7 +58,7 @@ const projectsData = {
             <img src="assets/push-it michael.png" alt="Push-It Image 5" class="side-image">
             <div class="side-blurb">
                 <h4 style="font-family:Montserrat; font-size:30px">Improving with user feedback</h4>
-                <br><p>We also created a comprehensive User Testing Guide for our prototype and turned each piece of feedback into an action item for future iterations.
+                <br><p>We created a comprehensive User Testing Guide for our prototype and converted each feedback note into an action item for future iterations.
                 </p>
             </div>
         </div>
@@ -77,8 +77,8 @@ const projectsData = {
                 <div class="side-blurb">
                     <h4 style="font-family:Montserrat; font-size:30px">The Problem</h4><br>
                     <ul style="font-size:15px">
-                        <li>Patients with paraplegia and quadriplegia experience significantly limited functions and mobility</li><br>
-                        <li>Those in rehab commonly struggle with mental health due to their sudden dependence on others - they feel helpless</li><br>
+                        <li>Patients with paraplegia and quadriplegia experience significantly limited mobility</li><br>
+                        <li>Those in rehab struggle with mental health due to their sudden feeling of helplessness</li><br>
                         <li>MILO aims to promote independence in these patients. Research has shown patients recover more rapidly with a positive mental state!</li>
                     </ul>
                 </div>
@@ -103,7 +103,7 @@ const projectsData = {
                 <img src="assets/MILO main visual.png" alt="MILO Image 3" class="side-image">
                 <div class="side-blurb">
                     <h4 style="font-family:Montserrat; font-size:30px">CAD Modeling</h4>
-                    <br><p>We utilized Solidworks to create a comprehensive CAD model of MILO, including the internal mechanical systems and the appropriate arm degrees of freedom (DOF).<br> MILO has 2 DOF, one linear (moving up and down) and one angular (rotating in the horizontal plane.
+                    <br><p>We utilized Solidworks to create a comprehensive CAD model of MILO, including the internal mechanical systems and the appropriate arm degrees of freedom (DOF).<br> MILO has 2 DOF, one linear (moving up and down) and one angular (rotating in the horizontal plane).
                     </p>
                 </div>
             </div>
