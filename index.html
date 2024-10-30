@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="assets/Untitled drawing (1).png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil's Portfolio</title>
+</head>
+<body>
+    <div id="backToTop" class="back-to-top" onclick="scrollToTop()">
+        <span>&uarr;</span>
+    </div>
+    <!-- Persistent Banner -->
+    <div class="top-banner" id="topBanner">
+        <div style="font-family:Montserrat; font-size:1.5rem;">Nikhil Nayak</div>
+        <div style="font-family:Arvo;font-size: 0.9rem; font-style: italic;">Refined design-gineering</div>
+    </div>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <h1>Nikhil Nayak</h1>
+        <p class="tagline">Refined <em>design-gineering</em></p>
+        <div class="nav-links">
+            <div class="nav-link" onclick="scrollToSection('about')">About Me</div>
+            <div class="nav-link" onclick="scrollToSection('design-gineering')">Philosophy</div>
+            <div class="nav-link" onclick="scrollToSection('projects-section')">Projects</div>
+        </div>
+        <div class="chevron" onclick="scrollToSection('about')"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <img src="assets/nikhil car picture.png" alt="Nikhil's Photo">
+        <div class="text">
+            <h2>About Me</h2>
+            <p>I am a designer with an electromechanical toolkit, focused on tackling everyday problems in an end-to-end process I refer to as “design-gineering.” <br><br>My study of mechanical and electrical engineering, coupled with my industry experience in R&D, Engineering, and Manufacturing, has helped me develop a thorough understanding of what it takes for a product to go from an idea to a mass-produced commodity.</p>
+        </div>
+    </section>
+
+    <!-- Design-gineering Section -->
+    <section class="design-gineering" id="design-gineering">
+        <div class="text">
+            <h2 style="font-family:Montserrat">What is<br><span style="white-space: nowrap;">design-gineering?</span></h2>
+            <p>A design-gineer understands end-to-end product development, from ideation through design and prototyping to a final product that can be mass-produced.</p>
+            
+            <h3>Skills</h3>
+            <ul class="skills-list">
+                <li>CAD</li>
+                <li>FEA</li>
+                <li>PCB design</li>
+                <li>Feedback control</li>
+                <li>Embedded programming</li>
+                <li>Rapid prototyping</li>
+            </ul>
+        </div>
+        <img src="assets/febreeze.png" alt="Designgineering Graphic">
+    </section>
+
+
+
+    <div id="projects-section">
+        <!-- Selected Projects 2x2 Grid -->
+        <br><br>
+        <div class="projects-grid">
+            <div class="grid-header" style="grid-column: span 2; font-family:Montserrat; font-size:60px; margin-bottom:2rem">Selected Projects</div>
+            <div class="project-item" onclick="openPopup('Push-It!')">
+                <img src="assets/push-it main visual.png" alt="Push-It Image">
+                <div class="project-overlay">
+                    <h3>Push-It!</h3>
+                    <p>A wheelchair attachment to open doors easily.</p>
+                </div>
+            </div>
+            <div class="project-item" onclick="openPopup('MILO')">
+                <img src="assets/MILO main visual.png" alt="MILO Image">
+                <div class="project-overlay">
+                    <h3>MILO</h3>
+                    <p>A voice-controlled robotic arm for hospital beds.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Other Projects 2x3 Grid -->
+        <div class="projects-grid other-projects-grid">
+            <div class="grid-header" style="grid-column: span 3; font-family:Montserrat; font-size:50px; margin-bottom:2rem">Other Projects</div>
+            <div class="project-item">
+                <img src="assets/method bottle main visual v2.png" alt="Method Bottle Image">
+                <div class="project-overlay">
+                    <h3>Method Bottle</h3>
+                    <p>A reverse-engineered CAD model of an everyday object.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="assets/motor driver main visual.JPG" alt="Motor Driver Image">
+                <div class="project-overlay">
+                    <h3>Motor Driver</h3>
+                    <p>A DC motor driver with a Python control interface.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="assets/robot main visual.png" alt="Line-following Robot Image">
+                <div class="project-overlay">
+                    <h3>Line-following Robot</h3>
+                    <p>A robot that uses feedback control loops to follow a line.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="overlayBackground" class="overlay-background"></div>
+
+
+    <!-- Popup Box -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2 id="popup-title"></h2>
+            <img id="" src="" alt="">
+            <p id="popup-description"></p>
+        </div>
+    </div>
+
+    
+
+
+    <!-- Footer -->
+    <footer>
+        <p style="color:white; font-family:Montserrat; font-size: 30px">Contact</p><br>
+        <p style="color:white; font-family:Arvo; font-size: 20px">nayakn@u.northwestern.edu    |    <a style="color:white" href="https://www.linkedin.com/in/n-nayak1/">LinkedIn</a>    |    (513) 630-5373</p>
+    </footer>
+</body>
+</html>
+
+<!--hello there-->
