@@ -124,6 +124,7 @@ section {
 .about img {
     max-width: 400px;
     border-radius: 30px;
+    margin: 2rem 0 3rem;
 }
 .about .text {
     max-width: 500px;
@@ -140,7 +141,7 @@ section {
 
 /* Design-gineering Section Layout */
 .design-gineering {
-    height: auto; /* Allow height to adjust based on content */
+    height: 100vh; /* Allow height to adjust based on content */
     padding: 3rem; /* Adjust padding for compactness */
     background-color: #d0d0d0;
     display: flex;
@@ -150,7 +151,7 @@ section {
 }
 
 .design-gineering .text {
-    max-width: 600px; /* Increase width for better visibility */
+    max-width: 700px; /* Increase width for better visibility */
     text-align: left;
     font-family: Arvo;
     color: black;
@@ -164,8 +165,10 @@ section {
 
 .design-gineering h3 {
     font-size: 2.5rem; /* Adjust font size for the skills heading */
-    margin: 0.5rem 0; /* Reduced margin for spacing */
+    margin: 0.5rem 0 1rem; /* Reduced margin for spacing */
+    font-family: Montserrat;
     color: black;
+    text-decoration: underline;
 }
 
 .design-gineering p {
@@ -175,25 +178,38 @@ section {
 }
 
 .design-gineering img {
-    max-width: 700px;
-    border-radius: 30px;
+    max-width: 40%; /* Allow image to resize relative to the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px;
+    flex-shrink: 0;
 }
 
 .skills-list {
-    list-style: none; /* Remove bullet points */
+    list-style: none; /* Remove default bullet points */
     padding: 0; /* Remove default padding */
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow skills to wrap to new lines */
-    color: black;
+    display: flex; /* Align items in a row */
+    flex-wrap: wrap; /* Allow wrapping to the next line if necessary */
+    gap: 1rem; /* Space between items */
 }
 
 .skills-list li {
-    font-size: 1.5rem; /* Adjust font size for list items */
-    margin-right: 1rem; /* Space between items */
-    margin-bottom: 0.5rem; /* Space between rows */
-    flex: 1 0 30%; /* Allow 2-3 items per line, adjusting to fit */
-    color: black;
+    font-size: 1.5rem; /* Set font size */
+    font-family: Arvo, sans-serif;
+    padding: 0.5rem 1rem; /* Space inside the box */
+    border: 2px solid black; /* Add black border */
+    border-radius: 5px; /* Rounded corners */
+    color: black; /* Default text color */
+    background-color: transparent; /* Transparent background by default */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Pointer cursor on hover */
 }
+
+.skills-list li:hover {
+    background-color: black; /* Turn background black on hover */
+    color: white; /* Change text color to white */
+    border-color: black; /* Ensure border color matches background */
+}
+
 
 #projects-section {
     padding: 2rem;
@@ -324,13 +340,13 @@ section {
     display: none;
     position: fixed;
     z-index: 999;
-    left: 50%;
-    top: 55%;
+    left:10%;
+    top:9%;
     width: 95vw; /* 90% of viewport width for flexibility on smaller screens */
     max-width: 1200px; /* Maximum width for larger screens */
     height: 90vh; /* 90% of viewport height */
     max-height: 700px; /* Maximum height */
-    transform: translate(-50%, -50%); /* Centers the popup */
+    transform: translate(0%, -100%); /* Centers the popup */
     overflow-y: auto; /* Allows scrolling if content exceeds height */
     background-color: rgba(0, 0, 0, 0.854);
     justify-content: center;
@@ -341,7 +357,7 @@ section {
 }
 
 .popup-content {
-    background-color: #dbd9d9;
+    background-color: #e0dfde;
     padding: 20px;
     border-radius: 5px;
     width: 100%; /* Ensure it takes the full width of the .popup container */
@@ -350,9 +366,16 @@ section {
     position: relative;
 }
 
+
+.popup.show-popup {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
 .close {
     position: fixed;
-    top: 10px;
+    top: 15px;
     right: 15px;
     font-size: 2.5rem;
     color: white; /* White "X" */
@@ -375,7 +398,16 @@ section {
     text-decoration: none;
 }
 
-
+.centered-image {
+    display: block; /* Make the image a block element */
+    max-width: 40%; /* Make sure the image doesn't overflow its container */
+    height: auto; /* Keep the image's aspect ratio */
+    margin-left: auto; /* Align image horizontally */
+    margin-right: auto; /* Align image horizontally */
+    display: block; /* Ensure it's displayed as a block */
+    padding: 10px; /* Optional: Add padding if you want to add some space around the image */
+    border-radius:20px;
+}
 
 /* Footer styling */
 footer {
@@ -435,22 +467,20 @@ footer {
 .side-image-container {
     display: flex;
     align-items: center; /* Align the image and text */
-    margin: 1rem 0; /* Space around the container */
-    margin-left: 6rem;
+    max-width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .side-image {
-    max-width: 35%; /* Adjust width to avoid overflow */
+    max-width: 40%; /* Adjust width to avoid overflow */
     height: auto;
-    margin-right: 1rem; /* Space between image and text */
-    margin-left: 6rem;
     border-radius:10px;
 }
 
 .side-blurb {
     flex: 1; /* Allow the text to take up the remaining space */
     font-family:Arvo;
-    margin-right:15rem;
     margin-left:2rem;
 }
 
@@ -466,7 +496,7 @@ footer {
     flex-direction: column; /* Stack images vertically */
     align-items: flex-start; /* Align images to the left */
     margin-right: 0.5rem; /* Adjust this value to control space */
-    margin-left:12rem;
+    justify-content:center;
 }
 
 .image-container {
@@ -491,11 +521,12 @@ footer {
     height: auto; /* Maintain aspect ratio */
     border-radius:10px;
     margin-left: 0rem;
+    justify-content:center;
 }
 
 /* Right-aligned Image */
 .right-aligned {
-    margin-left: 3rem; /* Bring closer to stacked images */
+    margin-left: 0rem; /* Bring closer to stacked images */
 }
 
 .right-aligned img {
@@ -515,11 +546,12 @@ footer {
 }
 
 .long-image {
-    width: 70%; /* Full width of the popup */
+    width: 60%; /* Full width of the popup */
     height: auto; /* Keep aspect ratio */
-    margin: 1rem 0; /* Space above and below */
-    margin-left: 10rem;
-    border-radius:10px;
+    justify-content:center;
+    border-radius:20px;
+    margin-left:20%;
+    margin-right:20%;
 }
 
 .centered-text {
@@ -529,8 +561,44 @@ footer {
     margin-left:15rem;
     margin-right:15rem;
     font-family:Arvo;
+    max-width: 60%;
 }
 
+.left-text {
+    text-align: left;
+    margin-top: 1rem;
+    font-size: 20px; /* Adjust font size as needed */
+    margin-left:15rem;
+    margin-right:15rem;
+    font-family:Arvo;
+    max-width: 80%;
+}
+
+.container {
+    text-align: center; /* Centers the text and image within the container */
+    width: 100%;        /* Adjust the width as necessary */
+}
+
+.container .title {
+    margin: 10px 0; /* Adds vertical spacing around the title and caption */
+    font-family: Montserrat;
+    font-size:3rem;
+}
+
+.container .caption {
+    margin: 10px 0; /* Adds vertical spacing around the title and caption */
+    font-family: Arvo;
+    font-size: 1.5rem;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: left;
+}
+
+.container img {
+    max-width: 60%;        /* Ensures the image is responsive and does not overflow its container */
+    height: auto;           /* Keeps the image aspect ratio intact */
+}
 
 
 
